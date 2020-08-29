@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #e2e4e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 1);
+            font-family: 'Alata', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .navbar nav img {
+            margin-top: 30px;
+            margin-left: 20px;
+            float: left;
+            box-sizing: inherit;
+        }
+
+        .navbar nav h1 {
+            float: left;
+            padding-top: 20px;
+            padding-left: 25px;
+            color: rgba(187, 1, 45, 1);
+            box-sizing: inherit;
+        }
+
+        .navbar nav button {
+            float: right;
+            height: 80px;
+            width: 85px;
+            background-color: rgba(255, 255, 255, 1);
+            border: none;
+            box-sizing: inherit;
+            cursor: pointer;
+        }
+
+        .navbar nav button span {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .navbar nav button img {
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 0px;
+        }
+
+        .navbar nav button:hover {
+            background-color: rgba(187, 1, 45, 1);
+        }
+
+        .main::before {
+            content: "";
+            position: absolute;
+            background-image: url("image/pariscity.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 600px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            box-sizing: border-box;
+
+        }
+
+        .main .box {
+            height: 250px;
+            width: 80%;
+            border: 1px solid black;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .main .box .heading {
+            height: 35px;
+            width: 100%;
+            background-color: rgba(187, 1, 45, 1);
+            color: white;
+            font-family: 'Alata', sans-serif;
+            font-size: 10px;
+        }
+
+        .main .box .heading h1 {
+            float: left;
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+
+        .main .box .heading img {
+            float: left;
+            margin-top: 5px;
+            margin-left: 25px;
+        }
+
+        .main .box .content {
+            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .main .box .content h4 {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        label {
+            padding-left: 22px;
+
+        }
+
+        input[type="text"] {
+            display: inline-block;
+            height: 33px;
+            width: 400px;
+            font-family: inherit;
+            font-size: 15px;
+            margin-top: 8px;
+            margin-left: 25px;
+            line-height: 2px;
+            border-radius: 3px;
+            border: 1px solid black;
+        }
+
+        input[type="submit"] {
+            margin-left: 40%;
+            padding: 10px;
+            width: 18%;
+            background-color: rgba(38, 38, 42, 1);
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .imgs h1 {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            margin: 10px 125px 10px;
+        }
+
+        .imgs p {
+            font-size: 20px;
+            margin: 10px 125px 10px;
+        }
+
+        .imgs p span {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .imgs .images {
+            display: grid;
+            height: 450px;
+            width: 80%;
+            margin-left: 125px;
+            color: white;
+            grid-template-columns: 200px 100px 100px 150px 100px 140px 100px;
+            grid-auto-rows: 200px;
+            grid-gap: 20px 20px;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .imgs .images .img1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-image: url("image/cinqueterre.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            padding-top: 85%;
+        }
+
+        .imgs .images .img2 {
+            grid-column-start: 4;
+            grid-column-end: 6;
+            background-image: url("image/newyork2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            padding-top: 60%;
+
+        }
+
+        .imgs .images .img3 {
+            grid-column-start: 6;
+            grid-column-end: 8;
+            background-image: url("image/parisnew.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            padding-top: 60%;
+
+
+        }
+
+        .imgs .images .img4 {
+            grid-column-start: 4;
+            grid-column-end: 6;
+            background-image: url("image/sanfran.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            padding-top: 60%;
+
+
+        }
+
+        .imgs .images .img5 {
+            grid-column-start: 6;
+            grid-column-end: 8;
+            background-image: url("image/pisa.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            padding-top: 60%;
+        }
+
+         .cards h4 {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            margin: 10px 125px 10px;
+        } 
+
+        .cards p {
+            font-size: 20px;
+            margin: 10px 125px 10px;
+        }
+
+        .cards .flex {
+            display: flex;
+            height: 500px;
+            width: 90%;
+            margin-left: 70px;
+            flex-flow:wrap;
+            justify-content: space-around;
+        }
+
+        .cards .flex .first {
+            width: 40%;
+            height: 500px;
+            background-color: white;
+            transition: all .10s linear;
+        }
+
+        .cards .flex .first img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .cards .flex .first h3 {
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .cards .flex .first h6 {
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            padding-top: 15px;
+            padding-left: 10px;
+            opacity: 0.8;
+        }
+
+        .cards .flex .first p {
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 15px;
+            padding-left: 8px;
+            margin: 0;
+        }
+
+        .cards .flex .first button {
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            background-color: white;
+        }
+
+        .cards .flex .first:hover {
+            transform: scaleY(1.06);
+        }
+
+        .flex .first button:hover {
+            background-color: rgba(182, 181, 184, 1);
+        }
+
+        .cards .flex .second {
+            width: 40%;
+            height: 500px;
+            transition: all 0.10s linear;
+            background-color: white;
+        }
+
+        .cards .flex .second img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .cards .flex .second h3 {
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .cards .flex .second h6 {
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            padding-top: 15px;
+            padding-left: 10px;
+            opacity: 0.8;
+        }
+
+        .cards .flex .second p {
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 15px;
+            padding-left: 8px;
+            margin: 0;
+        }
+
+        .cards .flex .second button {
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            background-color: white;
+        }
+
+        .flex .second button:hover {
+            background-color: rgba(182, 181, 184, 1);
+        }
+
+        .cards .flex .second:hover {
+            transform: scaleY(1.06);
+        }
+
+        .offer {
+            width: 81%;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+            margin-left: 128px;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+        .offer h3 {
+            padding-top: 30px;
+            padding-left: 15px;
+        }
+        .offer h6 {
+            font-size: 18px;
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+
+        label {
+            display: inline-block;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        input[type="email"] {
+            margin-left: 15px;
+            width: 80%;
+            height: 40px;
+            line-height: 1.5;
+
+        }
+
+        .offer input[type="submit"] {
+            margin-top: 15px;
+            margin-left: 15px;
+            background-color: rgba(255, 15, 15, 0.5);
+        }
+        .contact h3{
+            font-size:30px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:30px;
+            margin-left:125px;
+        }
+        .contact p{
+            font-size:20px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top:25px;
+            margin-left:125px;
+            margin-bottom:10px;
+        }
+        .contact img{
+            margin-left:120px;
+            float:left;
+        }
+        .offer:hover{
+            background-color:  rgba(0, 0, 0, 1);
+        }
+        .offer:hover .offer button{
+            background-color: rgba(255, 15, 15, 1); 
+        }
+        @media (min-width:1126px) and (max-width:1323px)     {
+           .main  .box .content input[type="text"]{
+               margin-left:10px;
+               width:35%;
+           } 
+        }
+        @media (max-width:1238px){
+            .main  .box .content input[type="text"]{
+               margin-left:10px;
+               width:35%;
+           }
+        }
+       @media only screen and (max-width:320px)
+       {   .navbar nav img {
+            margin-left: 10px;
+           }  
+           .navbar nav h1{
+               padding-left:15px;
+           }
+           .main .box{
+               height:350px;
+           }
+           .main .box .heading img{
+               margin-left:5px;
+           }
+           .main .box .heading h1{
+               margin-left:3px;
+           }
+           .main .box .content h4{
+               padding:10px;
+           }
+           .main .box .content input[type="text"]{
+               margin-left:10px;
+               width:200px;
+           }
+           .main .box .content input[type="submit"]
+           {
+               margin-left:35px;
+               width:70%;
+           }
+           .imgs h1{
+            font-size: 22px;   
+            margin:10px 25px 10px;
+           }
+           .imgs p{
+              
+               margin:10px 25px 10px;
+           }
+           .imgs{
+               height:1250px;
+                margin-bottom:550px; 
+           }
+           .imgs .images{
+               margin-left:3px;
+               grid-template-columns:100px 100px 25px;
+               grid-auto-rows:150px;
+               height:1200px;
+               
+           }
+           .imgs .images .img1{
+               grid-column:1 / span 3;
+               grid-row-start:1 ;
+               grid-row-end:3;
+               padding-top:98%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column:1 / span 3;
+               grid-row-start:3 ;
+               grid-row-end:5;
+               padding-top:98%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img3{
+               grid-column:1 / span 3;
+               grid-row-start:5 ;
+               grid-row-end:7;
+               padding-top:98%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img4{
+               grid-column:1 / span 3;
+               grid-row-start:7 ;
+               grid-row-end:9;
+               padding-top:98%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img5{
+               grid-column:1 / span 3;
+               grid-row-start:9 ;
+               grid-row-end:11;
+               padding-top:98%;
+               box-sizing: border-box;
+           }
+           .cards h4{
+            margin:10px 25px 10px;
+           }
+           .cards p{
+            margin:10px 25px 10px; 
+           }
+           .cards{
+               height:800px;
+               margin-bottom:350px;  
+           }
+           .cards .flex{
+               margin-left:10px;
+           }
+            .cards .flex .first{
+              width:100%;
+           } 
+           .cards .flex .second{
+              width:100%;
+           } 
+           .offer{
+               width:100%;
+               margin-left:0px;
+           }
+           .offer input[type="submit"]
+           {
+               width:30%;
+           }
+           .contact h3{
+               margin-left:10px;
+           }
+           .contact p{
+               margin-left:10px;
+           }
+           .contact img{
+               margin-left:10px;
+           }
+       }
+       @media (min-width:321px) and (max-width:375px)
+       {
+        .main .box{
+               height:350px;
+           }
+           .main .box .heading img{
+               margin-left:8px;
+           }
+           .main .box .heading h1{
+               margin-left:10px;
+           }
+           .main .box .content h4{
+               padding:10px;
+           }
+           .main .box .content label{
+               display:block;
+               padding-left:35px;
+           }
+           .main .box .content input[type="text"]{
+               margin-left:35px;
+               width:200px;
+           }
+           .main .box .content input[type="submit"]
+           {
+               margin-left:35px;
+               width:70%;
+           }
+           .imgs h1{
+            font-size: 22px;   
+            margin:10px 25px 10px;
+           }
+           .imgs p{
+              
+               margin:10px 25px 10px;
+           }
+           .imgs{
+               height:1250px;
+                margin-bottom:550px; 
+           }
+           .imgs .images{
+               margin-left:20px;
+               grid-template-columns:100px 100px 50px;
+               grid-auto-rows:150px;
+               height:1200px;
+               
+           }
+           .imgs .images .img1{
+               grid-column:1 / span 3;
+               grid-row-start:1 ;
+               grid-row-end:3;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column:1 / span 3;
+               grid-row-start:3 ;
+               grid-row-end:5;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img3{
+               grid-column:1 / span 3;
+               grid-row-start:5 ;
+               grid-row-end:7;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img4{
+               grid-column:1 / span 3;
+               grid-row-start:7 ;
+               grid-row-end:9;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img5{
+               grid-column:1 / span 3;
+               grid-row-start:9 ;
+               grid-row-end:11;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .cards h4{
+            margin:10px 25px 10px;
+           }
+           .cards p{
+            margin:10px 25px 10px; 
+           }
+           .cards{
+               height:800px;
+               margin-bottom:350px;  
+           }
+           .cards .flex{
+               margin-left:15px;
+           }
+            .cards .flex .first{
+              width:100%;
+           } 
+           .cards .flex .second{
+              width:100%;
+           } 
+           .offer{
+               width:100%;
+               margin-left:0px;
+           }
+           .offer input[type="submit"]
+           {
+               width:30%;
+           }
+           .contact h3{
+               margin-left:10px;
+           }
+           .contact p{
+               margin-left:10px;
+           }
+           .contact img{
+               margin-left:10px;
+           }
+
+       }
+       @media (min-width: 376px) and (max-width:450px){
+        .main .box{
+               height:350px;
+           }
+           .main .box .heading img{
+               margin-left:8px;
+           }
+           .main .box .heading h1{
+               margin-left:15px;
+           }
+           .main .box .content h4{
+               padding:10px;
+           }
+           .main .box .content label{
+               display:block;
+               padding-left:50px;
+           }
+           .main .box .content input[type="text"]{
+               margin-left:50px;
+               width:200px;
+           }
+           .main .box .content input[type="submit"]
+           {
+               margin-left:40px;
+               width:70%;
+           }
+           .imgs h1{
+            font-size: 22px;   
+            margin:10px 25px 10px;
+           }
+           .imgs p{
+              
+               margin:10px 25px 10px;
+           }
+           .imgs{
+               height:1250px;
+                margin-bottom:550px; 
+           }
+           .imgs .images{
+               margin-left:50px;
+               grid-template-columns:100px 100px 50px;
+               grid-auto-rows:150px;
+               height:1200px;
+               
+           }
+           .imgs .images .img1{
+               grid-column:1 / span 3;
+               grid-row-start:1 ;
+               grid-row-end:3;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column:1 / span 3;
+               grid-row-start:3 ;
+               grid-row-end:5;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img3{
+               grid-column:1 / span 3;
+               grid-row-start:5 ;
+               grid-row-end:7;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img4{
+               grid-column:1 / span 3;
+               grid-row-start:7 ;
+               grid-row-end:9;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img5{
+               grid-column:1 / span 3;
+               grid-row-start:9 ;
+               grid-row-end:11;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .cards h4{
+            margin:10px 25px 10px;
+           }
+           .cards p{
+            margin:10px 25px 10px; 
+           }
+           .cards{
+               height:800px;
+               margin-bottom:350px;  
+           }
+           .cards .flex{
+               margin-left:15px;
+           }
+            .cards .flex .first{
+              width:100%;
+           } 
+           .cards .flex .second{
+              width:100%;
+           } 
+           .offer{
+               width:100%;
+               margin-left:0px;
+           }
+           .offer input[type="submit"]
+           {
+               width:30%;
+           }
+           .contact h3{
+               margin-left:10px;
+           }
+           .contact p{
+               margin-left:10px;
+           }
+           .contact img{
+               margin-left:10px;
+           }
+   
+       }
+       @media (min-width:451px) and (max-width:500px)
+       {
+        .main .box{
+               height:350px;
+           }
+           .main .box .heading img{
+               margin-left:8px;
+           }
+           .main .box .heading h1{
+               margin-left:15px;
+           }
+           .main .box .content h4{
+               padding:10px;
+           }
+           .main .box .content label{
+               display:block;
+               padding-left:75px;
+           }
+           .main .box .content input[type="text"]{
+               margin-left:75px;
+               width:200px;
+           }
+           .main .box .content input[type="submit"]
+           {
+               margin-left:45px;
+               width:70%;
+           }
+           .imgs h1{
+            font-size: 22px;   
+            margin:10px 25px 10px;
+           }
+           .imgs p{
+              
+               margin:10px 25px 10px;
+           }
+           .imgs{
+               height:1250px;
+                margin-bottom:550px; 
+           }
+           .imgs .images{
+               margin-left:85px;
+               grid-template-columns:100px 100px 50px;
+               grid-auto-rows:150px;
+               height:1200px;
+               
+           }
+           .imgs .images .img1{
+               grid-column:1 / span 3;
+               grid-row-start:1 ;
+               grid-row-end:3;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column:1 / span 3;
+               grid-row-start:3 ;
+               grid-row-end:5;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img3{
+               grid-column:1 / span 3;
+               grid-row-start:5 ;
+               grid-row-end:7;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img4{
+               grid-column:1 / span 3;
+               grid-row-start:7 ;
+               grid-row-end:9;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img5{
+               grid-column:1 / span 3;
+               grid-row-start:9 ;
+               grid-row-end:11;
+               padding-top:90%;
+               box-sizing: border-box;
+           }
+           .cards h4{
+            margin:10px 25px 10px;
+           }
+           .cards p{
+            margin:10px 25px 10px; 
+           }
+           .cards{
+               height:800px;
+               margin-bottom:350px;  
+           }
+           .cards .flex{
+               margin-left:15px;
+           }
+            .cards .flex .first{
+              width:100%;
+           } 
+           .cards .flex .second{
+              width:100%;
+           } 
+           .offer{
+               width:100%;
+               margin-left:0px;
+           }
+           .offer input[type="submit"]
+           {
+               width:30%;
+           }
+           .contact h3{
+               margin-left:10px;
+           }
+           .contact p{
+               margin-left:10px;
+           }
+           .contact img{
+               margin-left:10px;
+           }
+   
+       }
+       @media (min-width:501px) and (max-width:700px)
+       {    
+           .main .box{
+               height:350px;
+           }
+           .main .box .content label{
+               display:block;
+               margin-left:45px;
+           }
+           .main .box .content form input[type="text"]{
+               width:75%;
+               margin-left:55px;
+           }
+           .main .box .content form input[type="submit"]
+           {
+               width:40%;
+               margin-left:145px;
+           }
+           .imgs h1{
+            margin: 10px 55px 10px;
+           } 
+           .imgs p{
+            margin: 10px 55px 10px;  
+           }
+           .imgs{
+               height:1250px;
+                margin-bottom:550px; 
+           }
+           .imgs .images{
+               margin-left:100px;
+               grid-template-columns:100px 100px 50px 50px;
+               grid-auto-rows:150px;
+               height:1200px;
+               
+           }
+           .imgs .images .img1{
+               grid-column:1 / span 4;
+               grid-row-start:1 ;
+               grid-row-end:3;
+               padding-top:80%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column:1 / span 4;
+               grid-row-start:3 ;
+               grid-row-end:5;
+               padding-top:80%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img3{
+               grid-column:1 / span 4;
+               grid-row-start:5 ;
+               grid-row-end:7;
+               padding-top:80%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img4{
+               grid-column:1 / span 4;
+               grid-row-start:7 ;
+               grid-row-end:9;
+               padding-top:80%;
+               box-sizing: border-box;
+           }
+           .imgs .images .img5{
+               grid-column:1 / span 4;
+               grid-row-start:9 ;
+               grid-row-end:11;
+               padding-top:80%;
+               box-sizing: border-box;
+           }
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+            justify-content:space-between;  
+            margin:5px 10px 5px;    
+           }
+           .cards .flex .first{
+               height:520px;
+               width:50%;
+           }
+           .cards .flex .second{
+               
+               height:520px;
+               width:49%;
+           }
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }
+       @media (min-width:701px) and (max-width:750px)
+       {    
+           .main .box{
+               height:350px;
+           }
+           .main .box .content label{
+               display:block;
+               margin-left:75px;
+           }
+           .main .box .content form input[type="text"]{
+               margin-left:95px;
+           }
+           .main .box .content form input[type="submit"]
+           {
+               width:30%;
+               margin-left:195px;
+           }
+           .imgs h1{
+            margin: 10px 20px 10px;
+           } 
+           .imgs p{
+            margin: 10px 20px 10px;  
+           }
+           .imgs .images{
+               grid-template-columns:100px 150px 100px 110px ;
+               grid-auto-rows:200px;
+               margin-left:25px;
+               height:700px;
+           }
+           .imgs .images .img1{
+               grid-column-start:1;
+               grid-column-end:3;
+               grid-row-start:1;
+               grid-row-end:3;
+               padding-top:370px;
+               box-sizing: border-box;
+           }
+           .imgs .images .img2{
+               grid-column-start:3;
+               grid-column-end:5;
+               grid-row-start:1;
+               grid-row-end:2;
+               padding-top:170px;
+               box-sizing: border-box;   
+           }
+           .imgs .images .img3{
+               grid-row-start:3;
+               grid-row-end:3;
+               grid-column-start:1;
+               grid-column-end:3;
+               padding-top:170px;
+           }
+           .imgs .images .img4{
+               grid-column-start:3;
+               grid-column-end:5;
+               grid-row-start:2;
+               grid-row-end:3;
+               padding-top:170px;
+           }
+           .imgs .images .img5{
+               grid-row-start:3;
+               grid-row-end:4;
+               grid-column-start:3;
+               grid-column-end:5;
+               padding-top:170px;
+           } 
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+        
+            margin:5px 25px 5px;   
+           }
+           .cards .flex .first{
+               width:48%;
+           }
+           .cards .flex .second{
+               width:48%;
+           }
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }
+       @media (min-width:751px) and (max-width:800px)
+       {    
+           .main .box{
+               height:350px;
+           }
+           .main .box .content label{
+               display:block;
+               margin-left:75px;
+           }
+           .main .box .content  input[type="text"]{
+               width:75%;
+               margin-left:95px;
+               display:block;
+           }
+           .main .box .content form input[type="submit"]
+           {
+               width:30%;
+               margin-left:195px;
+           }
+           .imgs h1{
+            margin: 10px 20px 10px;
+           } 
+           .imgs p{
+            margin: 10px 20px 10px;  
+           }
+           .imgs .images{
+               margin-left:20px;
+               height:700px;
+           }
+           .imgs .images .img3{
+               grid-row-start:3;
+               grid-row-end:3;
+               grid-column-start:1;
+               grid-column-end:4;
+               padding-top:150px;
+           }
+           .imgs .images .img5{
+               grid-row-start:3;
+               grid-row-end:4;
+               grid-column-start:4;
+               grid-column-end:6;
+           } 
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+        
+            margin:5px 25px 5px;   
+           }
+           .cards .flex .first{
+               width:48%;
+           }
+           .cards .flex .second{
+               width:48%;
+           }
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }
+       @media (min-width:801px) and (max-width:880px)
+       {    
+           .main .box{
+               height:350px;
+          }
+           .main .box .content label{
+               display:block;
+               margin-left:75px;
+           }
+           .main .box .content form input[type="text"]{
+               width:40%;
+               margin-left:85px;
+           }
+           .main .box .content form input[type="submit"]
+           {
+               width:30%;
+               margin-left:195px;
+           }
+           .imgs h1{
+            margin: 10px 20px 10px;
+           } 
+           .imgs p{
+            margin: 10px 20px 10px;  
+           }
+           .imgs .images{
+               margin-left:20px;
+               height:700px;
+           }
+           .imgs .images .img3{
+               grid-row-start:3;
+               grid-row-end:3;
+               grid-column-start:1;
+               grid-column-end:4;
+               padding-top:150px;
+           }
+           .imgs .images .img5{
+               grid-row-start:3;
+               grid-row-end:4;
+               grid-column-start:4;
+               grid-column-end:6;
+           } 
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+        
+            margin:5px 25px 5px;   
+           }
+           .cards .flex .first{
+               width:48%;
+           }
+           .cards .flex .second{
+               width:48%;
+           }
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }
+       @media (min-width:881px) and (max-width:900px)
+       {    
+           .main .box{
+               height:350px;
+          }
+           .main .box .content label{
+               display:block;
+               margin-left:95px;
+           }
+           .main .box .content  input[type="text"]{
+               width:500px;
+               margin-left:125px;
+           }
+           .main .box .content  input[type="submit"]
+           {
+               width:30%;
+               margin-left:195px;
+           }
+           .imgs h1{
+            margin: 10px 20px 10px;
+           } 
+           .imgs p{
+            margin: 10px 20px 10px;  
+           }
+           .imgs .images{
+               margin-left:20px;
+               height:700px;
+           }
+           .imgs .images .img3{
+               grid-row-start:3;
+               grid-row-end:3;
+               grid-column-start:1;
+               grid-column-end:4;
+               padding-top:150px;
+           }
+           .imgs .images .img5{
+               grid-row-start:3;
+               grid-row-end:4;
+               grid-column-start:4;
+               grid-column-end:6;
+           } 
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+        
+            margin:5px 25px 5px;   
+           }
+           .cards .flex .first{
+               width:48%;
+           }
+           .cards .flex .second{
+               width:48%;
+           }
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }   
+       @media (min-width:902px) and (max-width:1024px)
+       {    
+           .main .box{
+               height:350px;
+          }
+           .main .box .content label{
+               display:block;
+               margin-left:145px;
+           }
+           .main .box .content form input[type="text"]{
+            width:40%;
+           margin-left:155px;
+           }
+           .main .box .content form input[type="submit"]
+           {
+               width:30%;
+              margin-left:155px; 
+               
+           }
+           .imgs h1{
+            margin: 10px 20px 10px;
+           } 
+           .imgs p{
+            margin: 10px 20px 10px;  
+           }
+           .imgs .images{
+               margin-left:20px;
+               height:700px;
+           }
+           .imgs .images .img3{
+               grid-row-start:3;
+               grid-row-end:3;
+               grid-column-start:1;
+               grid-column-end:4;
+               padding-top:150px;
+           }
+           .imgs .images .img5{
+               grid-row-start:3;
+               grid-row-end:4;
+               grid-column-start:4;
+               grid-column-end:6;
+           } 
+           .cards h4{
+               margin:5px 55px 5px;
+           }
+           .cards p{
+            margin:5px 55px 5px;
+           }
+           .cards .flex{
+        
+            margin:5px 25px 5px;   
+           }
+           .cards .flex .first{
+               width:48%;
+           }
+           .cards .flex .second{
+               width:48%;
+           }
+
+           .offer{
+               margin-left:40px;
+           }
+           .contact h3{
+             margin-left:40px;        
+           }
+           .contact p{
+            margin-left:40px;  
+           }
+           .contact img{
+            margin-left:40px;  
+           }
+       }   
+     
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <img src="image/pin.png" alt="pin`">
+                <h1> Travel Guide </h1>
+                <button type="button"><span><img src="image/search.png"></span></button>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="box">
+                <div class="heading">
+                    <img src="image/airplane (1).png" alt="pin`">
+                    <h1>Flight</h1>
+                    <img src="image/sleep.png" alt="pin`">
+                    <h1>Hotel</h1>
+                    <img src="image/car (1).png" alt="pin`">
+                    <h1>Rental</h1>
+                </div>
+                <div class="content">
+                    <h4> Travel the world with us </h4>
+                    <form>
+                        <label for="From">From</label>
+                        <input type="text" placeholder="Departing from">
+                        <label for="From">To</label>
+                        <input type="text" placeholder="Arriving at"><br><br>
+                        <input type="submit" value="Search and find dates">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="imgs">
+        <h1>Good Offers Right Now</h1>
+        <p>Up to <span>50%</span> discount.</p>
+        <div class="images">
+            <div class="img1">Cinque Terre</div>
+            <div class="img2">New York</div>
+            <div class="img3">Paris</div>
+            <div class="img4">San Francisco</div>
+            <div class="img5">Pisa</div>
+        </div>
+    </section>
+    <section class="cards">
+        <h4>Explore Nature</h4>
+        <p>Travel with us and see nature at its finest.</p>
+        <div class="flex">
+            <div class="first">
+                <img src="image/cardimg1.jpg" alt="img1">
+                <h3>West Coast, Norway</h3>
+                <h6>Roundtrip from $79</h6>
+                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                <button type="button">Buy Tickets</button>
+            </div>
+            <div class="second">
+                <img src="image/cardimg2.jpg" alt="img2">
+                <h3>Mountains, Austria</h3>
+                <h6>One-way from $39</h6>
+                <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                <button type="button">Buy Tickets</button>
+            </div>
+        </div>
+    </section>
+    <section class="offer">
+        <h3>Get the best offers first!</h3>
+        <h6>Join our newsletter.</h6>
+        <form>
+            <label for="email">E-mail</label><br>
+            <input type="email" placeholder="provide your email address">
+            <input type="submit" value="Subscribe">
+        </form>
+
+    </section>
+    <section class="contact">
+      <h3>Contact</h3>
+      <p>let us book your next trip </p>
+      <img src="image/pin (1).png" alt="pin">
+      <pre>Chicago, US</pre><br>
+      <img src="image/phone.png" alt="phone">
+      <pre>Phone: +00 151515  </pre><br>
+      <img src="image/mail.png" alt="mail">
+      <pre>Email: mail@mail.com  </pre>
+
+    </section>
+</body>
+
+</html>
